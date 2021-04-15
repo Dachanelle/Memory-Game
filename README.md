@@ -6,7 +6,8 @@ Submitted by: Dachanelle Anderson
 
 Time spent: **#** hours spent in total
 
-Link to project: (insert your link here, should start with https://glitch.com...)
+Link to project: (https://glitch.com/edit/#!/sheer-tide-guan,
+https://sheer-tide-guan.glitch.me)
 
 ## Required Functionality
 
