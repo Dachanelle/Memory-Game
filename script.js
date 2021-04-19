@@ -5,8 +5,19 @@ const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 //Global Variables
-var pattern = [2, 2, 4, 3, 2, 1, 2, 4];
+var pattern = [];
+
+//The number of elements in pattern is selected randomly
+//Is between 1 and 8
+let n = Math.floor((Math.random() * 5));
+
+//Get the numbers randomly
+for(let i =0; i < n; i++){
+   pattern[i] = Math.floor((Math.random() * 8) + 1);
+  }
+
 var progress = 0; 
+
 var gamePlaying = false;
 // var tonePlaying = false;
 var volume = 0.5;  //must be between 0.0 and 1.0
@@ -27,7 +38,6 @@ function stopGame(){
   document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
   
-  
 }
 
 // Sound Synthesis Functions
@@ -35,7 +45,9 @@ const freqMap = {
   1: 261.6,
   2: 329.6,
   3: 392,
-  4: 466.2
+  4: 466.2,
+  5: 500.5,
+  6: 555.5
 }
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
@@ -114,7 +126,7 @@ function guess(btn){
   if(pattern[guessCounter]=== btn){
     //Guess is correct
     if(guessCounter === progress){
-      if(progress ===  pattern.length){
+      if(progress ===  pattern.length-1){
         winGame();
       }else{
         progress++;
@@ -127,5 +139,3 @@ function guess(btn){
     loseGame();
   }
 }
-
-

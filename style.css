@@ -40,6 +40,12 @@ button {
 #button4 {
     background: lightyellow;
 }
+#button5 {
+    background: aqua;
+}
+#button6 {
+    background: fuchsia;
+}
 
 #button1:active, #button1.lit{
     background:green;
@@ -55,6 +61,14 @@ button {
 
 #button4:active, #button4.lit{
     background:yellow;
+}
+
+#button5:active, #button5.lit{
+    background:teal;
+}
+
+#button6:active, #button6.lit{
+    background:purple;
 }
 
 
